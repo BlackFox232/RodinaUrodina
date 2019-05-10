@@ -14,6 +14,7 @@ namespace RodinaUrodina
 
     public partial class MyTours : Form
     {
+        private Bd_Interface bd_Interface = new Bd_Interface();
         int id = 1;
         public MyTours()
         {
@@ -22,11 +23,11 @@ namespace RodinaUrodina
 
         private void MyTours_Load(object sender, EventArgs e)
         {
-            
-            Bd_Interface.connection.Open();
-            Bd_Interface.command.CommandText = $"SELECT * FROM info_tours WHERE Id = {id}";
-            Bd_Interface.command.Connection = Bd_Interface.connection;
-
+            DataSet ds = new DataSet();
+            bd_Interface.ReturnAdapter("SELECT * FROM Tours");
+            SqlDataAdapter dataAdapter = bd_Interface.ReturnAdapter("SELECT * FROM Tours");
+            dataAdapter.Fill(ds, "User");
+            toursDataGridView.DataSource = ds.Tables["Tours"];
 
 
         }
