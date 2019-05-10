@@ -103,7 +103,7 @@ namespace RodinaUrodina
             }
 
 
-            Application.Run(new Authorization());
+            Application.Run(new Uzv());
 
             
 

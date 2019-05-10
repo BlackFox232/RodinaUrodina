@@ -60,8 +60,20 @@
     <Compile Include="Forms\Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
     <Compile Include="EconomicJobs.cs" />
-    <Compile Include="Forms\Requests.cs">
+    <Compile Include="MyTours.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyTours.Designer.cs">
+      <DependentUpon>MyTours.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Requests.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Requests.Designer.cs">
@@ -121,7 +133,13 @@
     <EmbeddedResource Include="Forms\Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Requests.resx">
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyTours.resx">
+      <DependentUpon>MyTours.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Requests.resx">
       <DependentUpon>Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usezver_Form.resx">

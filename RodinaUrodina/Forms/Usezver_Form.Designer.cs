@@ -39,16 +39,17 @@
             // 
             this.button1.Location = new System.Drawing.Point(347, 124);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 26);
+            this.button1.Size = new System.Drawing.Size(192, 26);
             this.button1.TabIndex = 0;
             this.button1.Text = "Мои туры";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(347, 156);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(178, 28);
+            this.button2.Size = new System.Drawing.Size(192, 28);
             this.button2.TabIndex = 1;
             this.button2.Text = "Доступные туры";
             this.button2.UseVisualStyleBackColor = true;
@@ -57,19 +58,21 @@
             // 
             this.button3.Location = new System.Drawing.Point(347, 190);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(178, 25);
+            this.button3.Size = new System.Drawing.Size(192, 25);
             this.button3.TabIndex = 2;
             this.button3.Text = "Контакты";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
             this.button4.Location = new System.Drawing.Point(347, 221);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(178, 23);
+            this.button4.Size = new System.Drawing.Size(192, 23);
             this.button4.TabIndex = 3;
             this.button4.Text = "Связь с разработчиком";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -92,6 +95,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Uzv";
             this.Text = "Форма юзверя";
+            this.Load += new System.EventHandler(this.Uzv_Load);
             this.ResumeLayout(false);
 
         }
