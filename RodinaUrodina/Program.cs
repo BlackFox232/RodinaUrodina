@@ -23,6 +23,7 @@ namespace RodinaUrodina
             MyTours
         }
         //comment
+        //second comment
         public static Forms SelectedForm { get; set; } = Forms.Authorization;
         public static bool IsClose { get; set; }
 
