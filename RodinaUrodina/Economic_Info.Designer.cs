@@ -1,6 +1,6 @@
 ﻿namespace RodinaUrodina
 {
-    partial class Form7
+    partial class Economic_Info
     {
         /// <summary>
         /// Required designer variable.

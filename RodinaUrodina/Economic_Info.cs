@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina
 {
-    public partial class Form5 : Form
+    public partial class Economic_Info : Form
     {
-        public Form5()
+        public Economic_Info()
         {
             InitializeComponent();
         }

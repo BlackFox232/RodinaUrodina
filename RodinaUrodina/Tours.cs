@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina
 {
-    public partial class Form8 : Form
+    public partial class Tours : Form
     {
-        public Form8()
+        public Tours()
         {
             InitializeComponent();
         }
