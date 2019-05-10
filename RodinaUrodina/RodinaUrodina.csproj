@@ -48,23 +48,23 @@
   <ItemGroup>
     <Compile Include="AuditJobs.cs" />
     <Compile Include="Bd_Interface.cs" />
-    <Compile Include="Authorization.cs">
+    <Compile Include="Forms\Authorization.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Authorization.Designer.cs">
+    <Compile Include="Forms\Authorization.Designer.cs">
       <DependentUpon>Authorization.cs</DependentUpon>
     </Compile>
-    <Compile Include="Admin_Form.cs">
+    <Compile Include="Forms\Admin_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Admin_Form.Designer.cs">
+    <Compile Include="Forms\Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
     <Compile Include="EconomicJobs.cs" />
-    <Compile Include="Requests.cs">
+    <Compile Include="Forms\Requests.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Requests.Designer.cs">
+    <Compile Include="Forms\Requests.Designer.cs">
       <DependentUpon>Requests.cs</DependentUpon>
     </Compile>
     <Compile Include="RodinaUrodinaDataSet.Designer.cs">
@@ -75,71 +75,71 @@
     <Compile Include="ToursJobs.cs" />
     <Compile Include="UsezverEconomicJobs.cs" />
     <Compile Include="UsezverToursJobs.cs" />
-    <Compile Include="Usezver_Form.cs">
+    <Compile Include="Forms\Usezver_Form.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usezver_Form.Designer.cs">
+    <Compile Include="Forms\Usezver_Form.Designer.cs">
       <DependentUpon>Usezver_Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Info_Tour.cs">
+    <Compile Include="Forms\Info_Tour.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Info_Tour.Designer.cs">
+    <Compile Include="Forms\Info_Tour.Designer.cs">
       <DependentUpon>Info_Tour.cs</DependentUpon>
     </Compile>
-    <Compile Include="Tours.cs">
+    <Compile Include="Forms\Tours.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Tours.Designer.cs">
+    <Compile Include="Forms\Tours.Designer.cs">
       <DependentUpon>Tours.cs</DependentUpon>
     </Compile>
-    <Compile Include="Registration.cs">
+    <Compile Include="Forms\Registration.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Registration.Designer.cs">
+    <Compile Include="Forms\Registration.Designer.cs">
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Economic_Info.cs">
+    <Compile Include="Forms\Economic_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Economic_Info.Designer.cs">
+    <Compile Include="Forms\Economic_Info.Designer.cs">
       <DependentUpon>Economic_Info.cs</DependentUpon>
     </Compile>
-    <Compile Include="Usezver_Info.cs">
+    <Compile Include="Forms\Usezver_Info.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Usezver_Info.Designer.cs">
+    <Compile Include="Forms\Usezver_Info.Designer.cs">
       <DependentUpon>Usezver_Info.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usezver.cs" />
-    <EmbeddedResource Include="Authorization.resx">
+    <EmbeddedResource Include="Forms\Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Admin_Form.resx">
+    <EmbeddedResource Include="Forms\Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Requests.resx">
+    <EmbeddedResource Include="Forms\Requests.resx">
       <DependentUpon>Requests.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usezver_Form.resx">
+    <EmbeddedResource Include="Forms\Usezver_Form.resx">
       <DependentUpon>Usezver_Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Info_Tour.resx">
+    <EmbeddedResource Include="Forms\Info_Tour.resx">
       <DependentUpon>Info_Tour.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Tours.resx">
+    <EmbeddedResource Include="Forms\Tours.resx">
       <DependentUpon>Tours.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Registration.resx">
+    <EmbeddedResource Include="Forms\Registration.resx">
       <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Economic_Info.resx">
+    <EmbeddedResource Include="Forms\Economic_Info.resx">
       <DependentUpon>Economic_Info.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Usezver_Info.resx">
+    <EmbeddedResource Include="Forms\Usezver_Info.resx">
       <DependentUpon>Usezver_Info.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
