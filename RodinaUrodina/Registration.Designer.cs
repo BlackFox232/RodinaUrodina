@@ -1,6 +1,6 @@
 ﻿namespace RodinaUrodina
 {
-    partial class Form8
+    partial class Registration
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,13 @@
         {
             this.SuspendLayout();
             // 
-            // Form8
+            // Form6
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "Form8";
-            this.Text = "Инфа о юзверях";
+            this.Name = "Form6";
+            this.Text = "Регистрация";
             this.ResumeLayout(false);
 
         }

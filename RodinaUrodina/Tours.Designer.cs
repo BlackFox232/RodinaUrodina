@@ -1,6 +1,6 @@
 ﻿namespace RodinaUrodina
 {
-    partial class Form5
+    partial class Tours
     {
         /// <summary>
         /// Required designer variable.
