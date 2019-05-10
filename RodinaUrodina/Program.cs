@@ -32,12 +32,12 @@ namespace RodinaUrodina
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-
+            Console.WriteLine("smth");
 
 
             Application.Run(new Authorization());
 
-
+            
 
 
 
