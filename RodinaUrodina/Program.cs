@@ -22,7 +22,7 @@ namespace RodinaUrodina
         }
 
         public static Forms SelectedForm { get; set; } = Forms.Authorization;
-        public static bool IsClose { get; set } = false;
+        public static bool IsClose { get; set; } = false;
 
 
         /// <summary>
@@ -103,7 +103,7 @@ namespace RodinaUrodina
             }
 
 
-            Application.Run(new Uzv());
+            Application.Run(new Usezver_Form());
 
             
 

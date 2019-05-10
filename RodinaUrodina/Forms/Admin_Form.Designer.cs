@@ -1,6 +1,6 @@
 ﻿namespace RodinaUrodina
 {
-    partial class Adm
+    partial class Admin_Form
     {
         /// <summary>
         /// Required designer variable.

@@ -8,8 +8,4 @@ namespace RodinaUrodina
     public class ManagerToursJobs : ManagerJobs
     {
     }
-
-    public class CopyOfManagerToursJobs
-    {
-    }
 }
