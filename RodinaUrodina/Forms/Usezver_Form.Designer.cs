@@ -53,6 +53,7 @@
             this.button2.TabIndex = 1;
             this.button2.Text = "Доступные туры";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -83,7 +84,7 @@
             this.button5.Text = "КНОПКА НАХОДИТСЯ В РАЗРАБОТКЕ!!!!!";
             this.button5.UseVisualStyleBackColor = true;
             // 
-            // Uzv
+            // Usezver_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -93,7 +94,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Uzv";
+            this.Name = "Usezver_Form";
             this.Text = "Форма юзверя";
             this.Load += new System.EventHandler(this.Uzv_Load);
             this.ResumeLayout(false);

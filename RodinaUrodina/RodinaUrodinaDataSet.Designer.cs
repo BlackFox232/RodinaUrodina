@@ -40,9 +40,9 @@ namespace RodinaUrodina {
         
         private global::System.Data.DataRelation relationFK_info_tours_Accounts1;
         
-        private global::System.Data.DataRelation relationFK_info_tours_Tours;
-        
         private global::System.Data.DataRelation relationFK_Messages_Accounts;
+        
+        private global::System.Data.DataRelation relationFK_info_tours_Tours;
         
         private global::System.Data.DataRelation relationFK_Requests_Tours;
         
@@ -347,8 +347,8 @@ namespace RodinaUrodina {
                 }
             }
             this.relationFK_info_tours_Accounts1 = this.Relations["FK_info_tours_Accounts1"];
-            this.relationFK_info_tours_Tours = this.Relations["FK_info_tours_Tours"];
             this.relationFK_Messages_Accounts = this.Relations["FK_Messages_Accounts"];
+            this.relationFK_info_tours_Tours = this.Relations["FK_info_tours_Tours"];
             this.relationFK_Requests_Tours = this.Relations["FK_Requests_Tours"];
         }
         
@@ -378,14 +378,14 @@ namespace RodinaUrodina {
                         this.tableAccounts.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableinfo_tours.Tour_idColumn}, false);
             this.Relations.Add(this.relationFK_info_tours_Accounts1);
-            this.relationFK_info_tours_Tours = new global::System.Data.DataRelation("FK_info_tours_Tours", new global::System.Data.DataColumn[] {
-                        this.tableTours.IdColumn}, new global::System.Data.DataColumn[] {
-                        this.tableinfo_tours.Tour_idColumn}, false);
-            this.Relations.Add(this.relationFK_info_tours_Tours);
             this.relationFK_Messages_Accounts = new global::System.Data.DataRelation("FK_Messages_Accounts", new global::System.Data.DataColumn[] {
                         this.tableAccounts.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableMessages.Usezver_idColumn}, false);
             this.Relations.Add(this.relationFK_Messages_Accounts);
+            this.relationFK_info_tours_Tours = new global::System.Data.DataRelation("FK_info_tours_Tours", new global::System.Data.DataColumn[] {
+                        this.tableTours.IdColumn}, new global::System.Data.DataColumn[] {
+                        this.tableinfo_tours.Tour_idColumn}, false);
+            this.Relations.Add(this.relationFK_info_tours_Tours);
             this.relationFK_Requests_Tours = new global::System.Data.DataRelation("FK_Requests_Tours", new global::System.Data.DataColumn[] {
                         this.tableTours.IdColumn}, new global::System.Data.DataColumn[] {
                         this.tableRequests.Number_tourColumn}, false);
@@ -2244,7 +2244,7 @@ namespace RodinaUrodina {
                         Reguest_date,
                         Usezver_login};
                 if ((parentToursRowByFK_Requests_Tours != null)) {
-                    columnValuesArray[1] = parentToursRowByFK_Requests_Tours[0];
+                    columnValuesArray[1] = parentToursRowByFK_Requests_Tours[7];
                 }
                 rowRequestsRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowRequestsRow);
@@ -2441,8 +2441,6 @@ namespace RodinaUrodina {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class ToursDataTable : global::System.Data.TypedTableBase<ToursRow> {
             
-            private global::System.Data.DataColumn columnId;
-            
             private global::System.Data.DataColumn columnDate;
             
             private global::System.Data.DataColumn columnNumber_persons;
@@ -2456,6 +2454,8 @@ namespace RodinaUrodina {
             private global::System.Data.DataColumn columnStatus;
             
             private global::System.Data.DataColumn columnPrice;
+            
+            private global::System.Data.DataColumn columnId;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
@@ -2488,14 +2488,6 @@ namespace RodinaUrodina {
             protected ToursDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn IdColumn {
-                get {
-                    return this.columnId;
-                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2556,6 +2548,14 @@ namespace RodinaUrodina {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn IdColumn {
+                get {
+                    return this.columnId;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2594,14 +2594,14 @@ namespace RodinaUrodina {
             public ToursRow AddToursRow(System.DateTime Date, int Number_persons, string Place, int Current_number_persons, string Info_tour, bool Status, string Price) {
                 ToursRow rowToursRow = ((ToursRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
                         Date,
                         Number_persons,
                         Place,
                         Current_number_persons,
                         Info_tour,
                         Status,
-                        Price};
+                        Price,
+                        null};
                 rowToursRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowToursRow);
                 return rowToursRow;
@@ -2631,7 +2631,6 @@ namespace RodinaUrodina {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnId = base.Columns["Id"];
                 this.columnDate = base.Columns["Date"];
                 this.columnNumber_persons = base.Columns["Number_persons"];
                 this.columnPlace = base.Columns["Place"];
@@ -2639,13 +2638,12 @@ namespace RodinaUrodina {
                 this.columnInfo_tour = base.Columns["Info_tour"];
                 this.columnStatus = base.Columns["Status"];
                 this.columnPrice = base.Columns["Price"];
+                this.columnId = base.Columns["Id"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnId);
                 this.columnDate = new global::System.Data.DataColumn("Date", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDate);
                 this.columnNumber_persons = new global::System.Data.DataColumn("Number_persons", typeof(int), null, global::System.Data.MappingType.Element);
@@ -2660,14 +2658,10 @@ namespace RodinaUrodina {
                 base.Columns.Add(this.columnStatus);
                 this.columnPrice = new global::System.Data.DataColumn("Price", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPrice);
+                this.columnId = new global::System.Data.DataColumn("Id", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
-                this.columnId.AutoIncrement = true;
-                this.columnId.AutoIncrementSeed = -1;
-                this.columnId.AutoIncrementStep = -1;
-                this.columnId.AllowDBNull = false;
-                this.columnId.ReadOnly = true;
-                this.columnId.Unique = true;
                 this.columnDate.AllowDBNull = false;
                 this.columnNumber_persons.AllowDBNull = false;
                 this.columnPlace.AllowDBNull = false;
@@ -2678,6 +2672,12 @@ namespace RodinaUrodina {
                 this.columnStatus.AllowDBNull = false;
                 this.columnPrice.AllowDBNull = false;
                 this.columnPrice.MaxLength = 10;
+                this.columnId.AutoIncrement = true;
+                this.columnId.AutoIncrementSeed = -1;
+                this.columnId.AutoIncrementStep = -1;
+                this.columnId.AllowDBNull = false;
+                this.columnId.ReadOnly = true;
+                this.columnId.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3312,17 +3312,6 @@ namespace RodinaUrodina {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int Id {
-                get {
-                    return ((int)(this[this.tableTours.IdColumn]));
-                }
-                set {
-                    this[this.tableTours.IdColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime Date {
                 get {
                     return ((global::System.DateTime)(this[this.tableTours.DateColumn]));
@@ -3395,6 +3384,17 @@ namespace RodinaUrodina {
                 }
                 set {
                     this[this.tableTours.PriceColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public int Id {
+                get {
+                    return ((int)(this[this.tableTours.IdColumn]));
+                }
+                set {
+                    this[this.tableTours.IdColumn] = value;
                 }
             }
             
@@ -5851,7 +5851,6 @@ SELECT Id, Number_tour, Status, Reguest_date, Usezver_login FROM Requests WHERE 
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "Tours";
-            tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Date", "Date");
             tableMapping.ColumnMappings.Add("Number_persons", "Number_persons");
             tableMapping.ColumnMappings.Add("Place", "Place");
@@ -5859,21 +5858,22 @@ SELECT Id, Number_tour, Status, Reguest_date, Usezver_login FROM Requests WHERE 
             tableMapping.ColumnMappings.Add("Info_tour", "Info_tour");
             tableMapping.ColumnMappings.Add("Status", "Status");
             tableMapping.ColumnMappings.Add("Price", "Price");
+            tableMapping.ColumnMappings.Add("Id", "Id");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [dbo].[Tours] WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Number_persons] = @Original_Number_persons) AND ([Current_number_persons] = @Original_Current_number_persons) AND ([Status] = @Original_Status) AND ([Price] = @Original_Price))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM [Tours] WHERE (([Date] = @Original_Date) AND ([Number_persons] = @Original_Number_persons) AND ([Current_number_persons] = @Original_Current_number_persons) AND ([Status] = @Original_Status) AND ([Price] = @Original_Price) AND ([Id] = @Original_Id))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_persons", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_number_persons", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO [dbo].[Tours] ([Date], [Number_persons], [Place], [Current_number_persons], [Info_tour], [Status], [Price]) VALUES (@Date, @Number_persons, @Place, @Current_number_persons, @Info_tour, @Status, @Price);
-SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price FROM Tours WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO [Tours] ([Date], [Number_persons], [Place], [Current_number_persons], [Info_tour], [Status], [Price]) VALUES (@Date, @Number_persons, @Place, @Current_number_persons, @Info_tour, @Status, @Price);
+SELECT Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price, Id FROM Tours WHERE (Id = SCOPE_IDENTITY())";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_persons", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5884,8 +5884,8 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE [dbo].[Tours] SET [Date] = @Date, [Number_persons] = @Number_persons, [Place] = @Place, [Current_number_persons] = @Current_number_persons, [Info_tour] = @Info_tour, [Status] = @Status, [Price] = @Price WHERE (([Id] = @Original_Id) AND ([Date] = @Original_Date) AND ([Number_persons] = @Original_Number_persons) AND ([Current_number_persons] = @Original_Current_number_persons) AND ([Status] = @Original_Status) AND ([Price] = @Original_Price));
-SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price FROM Tours WHERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE [Tours] SET [Date] = @Date, [Number_persons] = @Number_persons, [Place] = @Place, [Current_number_persons] = @Current_number_persons, [Info_tour] = @Info_tour, [Status] = @Status, [Price] = @Price WHERE (([Date] = @Original_Date) AND ([Number_persons] = @Original_Number_persons) AND ([Current_number_persons] = @Original_Current_number_persons) AND ([Status] = @Original_Status) AND ([Price] = @Original_Price) AND ([Id] = @Original_Id));
+SELECT Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price, Id FROM Tours WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_persons", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -5894,12 +5894,12 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Info_tour", global::System.Data.SqlDbType.Text, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Info_tour", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Price", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Date", global::System.Data.SqlDbType.Date, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Date", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Number_persons", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Current_number_persons", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Current_number_persons", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Status", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Status", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Price", global::System.Data.SqlDbType.NChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Price", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
@@ -5916,8 +5916,8 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Status" +
-                ", Price FROM dbo.Tours";
+            this._commandCollection[0].CommandText = "SELECT Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Pr" +
+                "ice, Id FROM Tours";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -5978,18 +5978,18 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Id, System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Id));
-            this.Adapter.DeleteCommand.Parameters[1].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Number_persons));
-            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(Original_Current_number_persons));
-            this.Adapter.DeleteCommand.Parameters[4].Value = ((bool)(Original_Status));
+        public virtual int Delete(System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price, int Original_Id) {
+            this.Adapter.DeleteCommand.Parameters[0].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.DeleteCommand.Parameters[1].Value = ((int)(Original_Number_persons));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(Original_Current_number_persons));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((bool)(Original_Status));
             if ((Original_Price == null)) {
                 throw new global::System.ArgumentNullException("Original_Price");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((string)(Original_Price));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((string)(Original_Price));
             }
+            this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(Original_Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -6053,7 +6053,7 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, int Number_persons, string Place, int Current_number_persons, string Info_tour, bool Status, string Price, int Original_Id, System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price, int Id) {
+        public virtual int Update(System.DateTime Date, int Number_persons, string Place, int Current_number_persons, string Info_tour, bool Status, string Price, System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price, int Original_Id, int Id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((System.DateTime)(Date));
             this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Number_persons));
             if ((Place == null)) {
@@ -6076,17 +6076,17 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
             else {
                 this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Price));
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[8].Value = ((System.DateTime)(Original_Date));
-            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Number_persons));
-            this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Current_number_persons));
-            this.Adapter.UpdateCommand.Parameters[11].Value = ((bool)(Original_Status));
+            this.Adapter.UpdateCommand.Parameters[7].Value = ((System.DateTime)(Original_Date));
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((int)(Original_Number_persons));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(Original_Current_number_persons));
+            this.Adapter.UpdateCommand.Parameters[10].Value = ((bool)(Original_Status));
             if ((Original_Price == null)) {
                 throw new global::System.ArgumentNullException("Original_Price");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Price));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((string)(Original_Price));
             }
+            this.Adapter.UpdateCommand.Parameters[12].Value = ((int)(Original_Id));
             this.Adapter.UpdateCommand.Parameters[13].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -6108,8 +6108,8 @@ SELECT Id, Date, Number_persons, Place, Current_number_persons, Info_tour, Statu
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(System.DateTime Date, int Number_persons, string Place, int Current_number_persons, string Info_tour, bool Status, string Price, int Original_Id, System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price) {
-            return this.Update(Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price, Original_Id, Original_Date, Original_Number_persons, Original_Current_number_persons, Original_Status, Original_Price, Original_Id);
+        public virtual int Update(System.DateTime Date, int Number_persons, string Place, int Current_number_persons, string Info_tour, bool Status, string Price, System.DateTime Original_Date, int Original_Number_persons, int Original_Current_number_persons, bool Original_Status, string Original_Price, int Original_Id) {
+            return this.Update(Date, Number_persons, Place, Current_number_persons, Info_tour, Status, Price, Original_Date, Original_Number_persons, Original_Current_number_persons, Original_Status, Original_Price, Original_Id, Original_Id);
         }
     }
     
