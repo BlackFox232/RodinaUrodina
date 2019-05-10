@@ -7,5 +7,6 @@ namespace RodinaUrodina
 {
     public class Bd_Interface
     {
+
     }
 }
