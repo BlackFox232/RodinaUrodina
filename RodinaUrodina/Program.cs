@@ -35,7 +35,7 @@ namespace RodinaUrodina
             Console.WriteLine("smth");
 
 
-            Application.Run(new Authorization());
+            Application.Run(new Uzv());
 
             
 
