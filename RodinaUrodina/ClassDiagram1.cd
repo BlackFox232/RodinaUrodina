@@ -1,24 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="RodinaUrodina.Bd_Interface">
-    <Position X="4.75" Y="0.5" Width="1.5" />
+    <Position X="5.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Bd_Interface.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RodinaUrodina.Manager">
-    <Position X="0.75" Y="0.5" Width="1.5" />
+  <Class Name="RodinaUrodina.ManagerJobs">
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="RodinaUrodina.Usezver">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+  <Class Name="RodinaUrodina.UsezverJobs">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Usezver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RodinaUrodina.ManagerToursJobs">
+    <Position X="2.25" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Usezver.cs</FileName>
+      <FileName>ToursJobs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RodinaUrodina.ManagerEconomicJobs" Collapsed="true">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EconomicJobs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RodinaUrodina.ManagerAuditJobs">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AuditJobs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RodinaUrodina.UsezverToursJobs">
+    <Position X="7.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsezverToursJobs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RodinaUrodina.UsezverEconomicJobs">
+    <Position X="9.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UsezverEconomicJobs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
