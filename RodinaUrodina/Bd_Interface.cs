@@ -9,8 +9,13 @@ namespace RodinaUrodina
     public class Bd_Interface
     {
         private const string connectionString = "Data Source = BLACKFOX232; Initial Catalog = RodinaUrodina; Integrated Security = True";
-        public static readonly SqlConnection connection = new SqlConnection(connectionString);
-        public static readonly SqlCommand command = new SqlCommand();
+        public readonly SqlConnection connection = new SqlConnection(connectionString);
+        public readonly SqlCommand command = new SqlCommand();
 
+        public SqlDataAdapter ReturnAdapter(string query)
+        {
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
+            return dataAdapter;
+        }
     }
 }

@@ -76,6 +76,9 @@
     <Compile Include="Forms\Requests.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\Requests.Designer.cs">
+      <DependentUpon>Requests.cs</DependentUpon>
+    </Compile>
     <Compile Include="RodinaUrodinaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -135,9 +138,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MyTours.resx">
       <DependentUpon>MyTours.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Requests.resx">
-      <DependentUpon>Requests.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Usezver_Form.resx">
       <DependentUpon>Usezver_Form.cs</DependentUpon>
