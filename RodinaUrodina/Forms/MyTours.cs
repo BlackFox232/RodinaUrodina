@@ -26,7 +26,7 @@ namespace RodinaUrodina
             MessageBox.Show("Test");
             DataSet ds = new DataSet();
             
-            bd_Interface.ReturnAdapter($"SELECT  FROM info_tours where Id ={id}").Fill(ds, "Tours");
+            bd_Interface.ReturnAdapter($"SELECT * FROM info_tours where Id ={id}").Fill(ds, "Tours");
             
             toursDataGridView.DataSource = ds.Tables["Tours"];
 

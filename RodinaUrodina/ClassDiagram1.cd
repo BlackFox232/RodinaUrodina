@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="RodinaUrodina.Bd_Interface">
-    <Position X="5.5" Y="0.5" Width="1.5" />
+  <Class Name="RodinaUrodina.Bd_Interface" Collapsed="true">
+    <Position X="5.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgAAAABAAAAAAQAAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Bd_Interface.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -24,37 +24,52 @@
   <Class Name="RodinaUrodina.ManagerToursJobs">
     <Position X="2.25" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ToursJobs.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bd_Interface" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RodinaUrodina.ManagerEconomicJobs" Collapsed="true">
     <Position X="4.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EconomicJobs.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bd_Interface" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RodinaUrodina.ManagerAuditJobs">
     <Position X="0.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AuditJobs.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bd_Interface" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RodinaUrodina.UsezverToursJobs">
     <Position X="7.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAIAAA=</HashCode>
       <FileName>UsezverToursJobs.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bd_Interface" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="RodinaUrodina.UsezverEconomicJobs">
     <Position X="9.75" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UsezverEconomicJobs.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Bd_Interface" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
