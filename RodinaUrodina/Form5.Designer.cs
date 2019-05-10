@@ -122,7 +122,7 @@
             this.Column7,
             this.Column6});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 88);
+            this.dataGridView1.Location = new System.Drawing.Point(9, 88);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
