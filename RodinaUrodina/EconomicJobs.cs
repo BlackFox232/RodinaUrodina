@@ -9,7 +9,5 @@ namespace RodinaUrodina
     {
     }
 
-    public class CopyOfManagerEconomicJobs
-    {
-    }
+
 }

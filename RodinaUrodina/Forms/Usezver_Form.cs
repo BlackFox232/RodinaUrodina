@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina
 {
-    public partial class Uzv : Form
+    public partial class Usezver_Form : Form
     {
-        public Uzv()
+        public Usezver_Form()
         {
             InitializeComponent();
         }

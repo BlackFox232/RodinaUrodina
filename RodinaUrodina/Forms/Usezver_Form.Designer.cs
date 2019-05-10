@@ -1,6 +1,6 @@
 ﻿namespace RodinaUrodina
 {
-    partial class Uzv
+    partial class Usezver_Form
     {
         /// <summary>
         /// Required designer variable.
