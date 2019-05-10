@@ -9,7 +9,4 @@ namespace RodinaUrodina
     {
     }
 
-    public class CopyOfManagerAuditJobs
-    {
-    }
 }
