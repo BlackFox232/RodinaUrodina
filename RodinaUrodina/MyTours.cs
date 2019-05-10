@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina
 {
-    
+
     public partial class MyTours : Form
     {
-        
+        int id = 1;
         public MyTours()
         {
             InitializeComponent();
@@ -23,13 +23,12 @@ namespace RodinaUrodina
         private void MyTours_Load(object sender, EventArgs e)
         {
             
-           
-            
-                Bd_Interface.connection.Open();
-
-            Bd_Interface.command.CommandText = "SELECT * FROM Users";
+            Bd_Interface.connection.Open();
+            Bd_Interface.command.CommandText = $"SELECT * FROM info_tours WHERE Id = {id}";
             Bd_Interface.command.Connection = Bd_Interface.connection;
-            
+
+
+
         }
     }
 }
