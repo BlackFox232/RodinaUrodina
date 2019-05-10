@@ -48,11 +48,11 @@
   <ItemGroup>
     <Compile Include="AuditJobs.cs" />
     <Compile Include="Bd_Interface.cs" />
-    <Compile Include="Forms\Authorization.cs">
+    <Compile Include="Forms\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Authorization.Designer.cs">
-      <DependentUpon>Authorization.cs</DependentUpon>
+    <Compile Include="Forms\FormLogIn.Designer.cs">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Admin_Form.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usezver.cs" />
-    <EmbeddedResource Include="Forms\Authorization.resx">
-      <DependentUpon>Authorization.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\FormLogIn.resx">
+      <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Admin_Form.resx">
       <DependentUpon>Admin_Form.cs</DependentUpon>
@@ -168,6 +168,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
@@ -193,6 +194,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonExit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonExitPut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonPressLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ButtonPutLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckInBlack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CheckInRed.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
