@@ -37,63 +37,63 @@ namespace RodinaUrodina
 
 
 
-            //while (true)
-            //{
-            //    switch (SelectedForm)
-            //    {
-            //        case Forms.Authorization:
-            //            {
-            //                Application.Run(new Authorization());
-            //                break;
-            //            }
+            while (true)
+            {
+                switch (SelectedForm)
+                {
+                    case Forms.Authorization:
+                        {
+                            Application.Run(new Authorization());
+                            break;
+                        }
 
-            //        case Forms.Registration:
-            //            {
-            //                Application.Run(new Registration());
-            //                break;
-            //            }
+                    case Forms.Registration:
+                        {
+                            Application.Run(new Registration());
+                            break;
+                        }
 
-            //        case Forms.Admin_Form:
-            //            {
-            //                Application.Run(new Admin_Form());
-            //                break;
-            //            }
+                    case Forms.Admin_Form:
+                        {
+                            Application.Run(new Admin_Form());
+                            break;
+                        }
 
-            //        case Forms.Economic_Info:
-            //            {
-            //                Application.Run(new Economic_Info());
-            //                break;
-            //            }
+                    case Forms.Economic_Info:
+                        {
+                            Application.Run(new Economic_Info());
+                            break;
+                        }
 
-            //        case Forms.Info_Tour:
-            //            {
-            //                Application.Run(new Info_Tour());
-            //                break;
-            //            }
+                    case Forms.Info_Tour:
+                        {
+                            Application.Run(new Info_Tour());
+                            break;
+                        }
 
-            //        case Forms.Requests:
-            //            {
-            //                Application.Run(new Requests());
-            //                break;
-            //            }
+                    case Forms.Requests:
+                        {
+                            Application.Run(new Requests());
+                            break;
+                        }
 
-            //        case Forms.Tours:
-            //            {
-            //                Application.Run(new Tours());
-            //                break;
-            //            }
+                    case Forms.Tours:
+                        {
+                            Application.Run(new Tours());
+                            break;
+                        }
 
-            //        case Forms.Usezver_Form:
-            //            {
-            //                Application.Run(new Usezver_Form());
-            //                break;
-            //            }
+                    case Forms.Usezver_Form:
+                        {
+                            Application.Run(new Usezver_Form());
+                            break;
+                        }
 
-            //        case Forms.Usezver_Info:
-            //            {
-            //                Application.Run(new Usezver_Info());
-            //                break;
-            //            }
+                    case Forms.Usezver_Info:
+                        {
+                            Application.Run(new Usezver_Info());
+                            break;
+                        }
 
                     case Forms.Contacts:
                         {
@@ -111,9 +111,9 @@ namespace RodinaUrodina
                         break;
                 }
 
-            //    if (IsClose)
-            //        break;
-            //}
+                if (IsClose)
+                    break;
+            }
 
 
             Application.Run(new Usezver_Form());
