@@ -42,6 +42,7 @@ namespace RodinaUrodina
             finally
             {
                 reader.Close();
+                connection.Close();
             }
 
         }
