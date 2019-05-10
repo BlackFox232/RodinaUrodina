@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina
 {
-    public partial class Admin_Form : Form
+    public partial class MyTours : Form
     {
-        public Admin_Form()
+        public MyTours()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void MyTours_Load(object sender, EventArgs e)
         {
-
+           
         }
     }
 }
