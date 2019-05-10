@@ -10,10 +10,10 @@ namespace RodinaUrodina
     {
         public enum Forms
         {
-            Authorization,
             Registration,
             Admin_Form,
             Economic_Info,
+            FormLogIn,
             Info_Tour,
             MyRequest,
             Tours,
@@ -24,8 +24,10 @@ namespace RodinaUrodina
         }
         //comment
         //second comment
-        public static Forms SelectedForm { get; set; } = Forms.Authorization;
+        public static Forms SelectedForm { get; set; } = Forms.FormLogIn;
         public static bool IsClose { get; set; }
+
+        public static int UserId;
 
 
         /// <summary>
@@ -45,12 +47,6 @@ namespace RodinaUrodina
 
                 switch (SelectedForm)
                 {
-                    case Forms.Authorization:
-                        {
-                            Application.Run(new Authorization());
-                            break;
-                        }
-
                     case Forms.Registration:
                         {
                             Application.Run(new Registration());
@@ -66,6 +62,12 @@ namespace RodinaUrodina
                     case Forms.Economic_Info:
                         {
                             Application.Run(new Economic_Info());
+                            break;
+                        }
+
+                    case Forms.FormLogIn:
+                        {
+                            Application.Run(new FormLogIn());
                             break;
                         }
 
