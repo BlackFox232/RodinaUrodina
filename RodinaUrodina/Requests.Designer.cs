@@ -267,7 +267,6 @@
             this.Controls.Add(this.requestsDataGridView);
             this.Controls.Add(this.requestsBindingNavigator);
             this.Name = "Requests";
-            this.Text = "Requests";
             this.Load += new System.EventHandler(this.Requests_Load);
             ((System.ComponentModel.ISupportInitialize)(this.rodinaUrodinaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.requestsBindingSource)).EndInit();

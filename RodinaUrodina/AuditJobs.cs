@@ -5,8 +5,11 @@ using System.Text;
 
 namespace RodinaUrodina
 {
-    public class Bd_Interface
+    public class ManagerAuditJobs : ManagerJobs
     {
-       
+    }
+
+    public class CopyOfManagerAuditJobs
+    {
     }
 }

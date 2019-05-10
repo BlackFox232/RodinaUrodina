@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AuditJobs.cs" />
     <Compile Include="Bd_Interface.cs" />
     <Compile Include="Authorization.cs">
       <SubType>Form</SubType>
@@ -59,6 +60,7 @@
     <Compile Include="Admin_Form.Designer.cs">
       <DependentUpon>Admin_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="EconomicJobs.cs" />
     <Compile Include="Requests.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>RodinaUrodinaDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ToursJobs.cs" />
+    <Compile Include="UsezverEconomicJobs.cs" />
+    <Compile Include="UsezverToursJobs.cs" />
     <Compile Include="Usezver_Form.cs">
       <SubType>Form</SubType>
     </Compile>

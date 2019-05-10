@@ -5,7 +5,11 @@ using System.Text;
 
 namespace RodinaUrodina
 {
-    public class Usezver
+    public class UsezverJobs
     {
+        public void DbUse()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
