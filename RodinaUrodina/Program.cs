@@ -15,10 +15,11 @@ namespace RodinaUrodina
             Admin_Form,
             Economic_Info,
             Info_Tour,
-            Requests,
             Tours,
             Usezver_Form,
-            Usezver_Info
+            Usezver_Info,
+            Contacts,
+            MyTours
         }
 
         public static Forms SelectedForm { get; set; } = Forms.Authorization;
@@ -31,7 +32,7 @@ namespace RodinaUrodina
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
+            Application.EnableVisualStyles(); 
             Application.SetCompatibleTextRenderingDefault(false);
 
 
@@ -94,9 +95,21 @@ namespace RodinaUrodina
             //                break;
             //            }
 
-            //        default:
-            //            break;
-            //    }
+                    case Forms.Contacts:
+                        {
+                            Application.Run(new Contacts());
+                            break;
+                        }
+
+                    case Forms.MyTours:
+                        {
+                            Application.Run(new MyTours());
+                            break;
+                        }
+
+                    default:
+                        break;
+                }
 
             //    if (IsClose)
             //        break;
