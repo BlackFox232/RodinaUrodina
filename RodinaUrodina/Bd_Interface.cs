@@ -8,7 +8,7 @@ namespace RodinaUrodina
 {
     public class Bd_Interface
     {
-        private const string connectionString = "Data Source = BLACKFOX232; Initial Catalog = RodinaUrodina; Integrated Security = True";
+        public const string connectionString = "Data Source = BLACKFOX232; Initial Catalog = RodinaUrodina; Integrated Security = True";
         public readonly SqlConnection connection = new SqlConnection(connectionString);
         public readonly SqlCommand command = new SqlCommand();
 

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace RodinaUrodina.Forms
 {
-    public partial class Requests : Form
+    public partial class MyRequest : Form
     {
-        public Requests()
+        public MyRequest()
         {
             InitializeComponent();
         }
