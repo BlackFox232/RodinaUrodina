@@ -23,10 +23,11 @@ namespace RodinaUrodina
 
         private void MyTours_Load(object sender, EventArgs e)
         {
+            MessageBox.Show("Test");
             DataSet ds = new DataSet();
-            bd_Interface.ReturnAdapter("SELECT * FROM Tours");
-            SqlDataAdapter dataAdapter = bd_Interface.ReturnAdapter("SELECT * FROM Tours");
-            dataAdapter.Fill(ds, "User");
+            
+            bd_Interface.ReturnAdapter("SELECT * FROM Tours").Fill(ds, "Tours");
+            
             toursDataGridView.DataSource = ds.Tables["Tours"];
 
 

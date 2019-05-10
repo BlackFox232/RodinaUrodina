@@ -67,6 +67,12 @@
       <DependentUpon>Contacts.cs</DependentUpon>
     </Compile>
     <Compile Include="EconomicJobs.cs" />
+    <Compile Include="Forms\MyRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MyRequest.Designer.cs">
+      <DependentUpon>MyRequest.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MyTours.cs">
       <SubType>Form</SubType>
     </Compile>
