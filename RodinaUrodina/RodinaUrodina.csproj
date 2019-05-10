@@ -79,6 +79,9 @@
     <Compile Include="Forms\MyTours.Designer.cs">
       <DependentUpon>MyTours.cs</DependentUpon>
     </Compile>
+    <Compile Include="RodinaUrodinaDataSet.cs">
+      <DependentUpon>RodinaUrodinaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="RodinaUrodinaDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
