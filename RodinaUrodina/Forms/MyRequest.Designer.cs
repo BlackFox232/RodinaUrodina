@@ -1,4 +1,4 @@
-﻿namespace RodinaUrodina.Forms
+﻿namespace RodinaUrodina
 {
     partial class MyRequest
     {
