@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security.Cryptography;
+using System.Text;
 
 namespace RodinaUrodina
 {
@@ -10,9 +12,9 @@ namespace RodinaUrodina
     {
         public enum Forms
         {
-            Registration,
             Admin_Form,
             Economic_Info,
+            FormCheckIn,
             FormLogIn,
             Info_Tour,
             MyRequest,
@@ -22,8 +24,7 @@ namespace RodinaUrodina
             Contacts,
             MyTours
         }
-        //comment
-        //second comment
+
         public static Forms SelectedForm { get; set; } = Forms.FormLogIn;
         public static bool IsClose { get; set; }
 
@@ -40,18 +41,13 @@ namespace RodinaUrodina
             Application.SetCompatibleTextRenderingDefault(false);
 
 
-
             while (true)
             {
                 IsClose = true;
 
+                #region Run selected form
                 switch (SelectedForm)
                 {
-                    case Forms.Registration:
-                        {
-                            Application.Run(new Registration());
-                            break;
-                        }
 
                     case Forms.Admin_Form:
                         {
@@ -62,6 +58,12 @@ namespace RodinaUrodina
                     case Forms.Economic_Info:
                         {
                             Application.Run(new Economic_Info());
+                            break;
+                        }
+
+                    case Forms.FormCheckIn:
+                        {
+                            Application.Run(new FormCheckIn());
                             break;
                         }
 
@@ -111,17 +113,31 @@ namespace RodinaUrodina
                         {
                             Application.Run(new MyTours());
                             break;
-                        }
+                        }                       
 
-                    default:
-                        break;
                 }
+                #endregion
 
                 if (IsClose)
                     break;
-            }
+            } 
+        }
 
-            Application.Run(new Usezver_Form());    
+
+        public static string GetHash(string Data)
+        {
+            using (SHA512 SHA512Hash = SHA512.Create())
+            {
+                byte[] bytes = SHA512Hash.ComputeHash(Encoding.UTF8.GetBytes(Data));
+  
+                StringBuilder builder = new StringBuilder();
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
+            }
         }
     }
 }

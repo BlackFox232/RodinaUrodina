@@ -8,7 +8,6 @@ namespace RodinaUrodina
 {
     public class UsezverToursJobs : UsezverJobs
     {
-        private Bd_Interface Bd_Interface = new Bd_Interface();
        
 
         public DataTable GetAllTours()

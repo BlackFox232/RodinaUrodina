@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="ButtonCancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonCancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ButtonCancelPut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ButtonCancelPut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="ButtonExit" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ButtonExit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,6 +141,15 @@
   </data>
   <data name="CheckInBlack" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CheckInBlack.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CheckInInFormBasic" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckInInFormBasic.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CheckInInFormPress" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckInInFormPress.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CheckInInFormPut" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\CheckInInFormPut.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CheckInRed" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CheckInRed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
