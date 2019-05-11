@@ -8,6 +8,4 @@ namespace RodinaUrodina
     public class ManagerEconomicJobs : ManagerJobs
     {
     }
-
-
 }

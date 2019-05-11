@@ -37,15 +37,14 @@ namespace RodinaUrodina
         void WrongLogPass()
         {
             ClearTB();
-
-            MessageBox.Show("Неверный логин или пароль!", "Ошибка!");   //сообщение об ошибке
+             
+              //сообщение об ошибке
         }
 
         void CorrectLogPass(int Id, bool IsAdmin)
         {
             ClearTB();
-
-            MessageBox.Show($"ID = {Id}");
+            
             Program.UserId = Id;
 
             if(IsAdmin)

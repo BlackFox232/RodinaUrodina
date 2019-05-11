@@ -227,19 +227,13 @@
     <None Include="Resources\CheckInRed.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonCancel.png" />
+    <None Include="Resources\Без названия.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ButtonCancelPut.png" />
+    <None Include="Resources\depositphotos_63554371-stock-photo-beautiful-gray-background.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\CheckInInFormBasic.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CheckInInFormPress.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\CheckInInFormPut.png" />
+    <None Include="Resources\Безымянный.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
