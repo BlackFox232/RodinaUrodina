@@ -46,6 +46,7 @@
             this.LogTB.ForeColor = System.Drawing.Color.Silver;
             this.LogTB.Location = new System.Drawing.Point(305, 240);
             this.LogTB.Margin = new System.Windows.Forms.Padding(0);
+            this.LogTB.MaxLength = 23;
             this.LogTB.Name = "LogTB";
             this.LogTB.Size = new System.Drawing.Size(350, 26);
             this.LogTB.TabIndex = 2;
@@ -65,6 +66,7 @@
             this.PassTB.ForeColor = System.Drawing.Color.Silver;
             this.PassTB.Location = new System.Drawing.Point(305, 280);
             this.PassTB.Margin = new System.Windows.Forms.Padding(0);
+            this.PassTB.MaxLength = 23;
             this.PassTB.Name = "PassTB";
             this.PassTB.Size = new System.Drawing.Size(350, 26);
             this.PassTB.TabIndex = 3;
