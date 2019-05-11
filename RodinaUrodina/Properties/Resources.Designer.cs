@@ -63,6 +63,26 @@ namespace RodinaUrodina.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ButtonCancel {
+            get {
+                object obj = ResourceManager.GetObject("ButtonCancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ButtonCancelPut {
+            get {
+                object obj = ResourceManager.GetObject("ButtonCancelPut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap ButtonExit {
             get {
                 object obj = ResourceManager.GetObject("ButtonExit", resourceCulture);
@@ -122,6 +142,36 @@ namespace RodinaUrodina.Properties {
         
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckInInFormBasic {
+            get {
+                object obj = ResourceManager.GetObject("CheckInInFormBasic", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckInInFormPress {
+            get {
+                object obj = ResourceManager.GetObject("CheckInInFormPress", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap CheckInInFormPut {
+            get {
+                object obj = ResourceManager.GetObject("CheckInInFormPut", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap CheckInRed {
             get {

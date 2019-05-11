@@ -55,6 +55,12 @@
   <ItemGroup>
     <Compile Include="AuditJobs.cs" />
     <Compile Include="Bd_Interface.cs" />
+    <Compile Include="Forms\FormCheckIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormCheckIn.Designer.cs">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,12 +121,6 @@
     <Compile Include="Forms\Tours.Designer.cs">
       <DependentUpon>Tours.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Registration.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Registration.Designer.cs">
-      <DependentUpon>Registration.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Economic_Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +137,9 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Usezver.cs" />
+    <EmbeddedResource Include="Forms\FormCheckIn.resx">
+      <DependentUpon>FormCheckIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FormLogIn.resx">
       <DependentUpon>FormLogIn.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Tours.resx">
       <DependentUpon>Tours.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Registration.resx">
-      <DependentUpon>Registration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Economic_Info.resx">
       <DependentUpon>Economic_Info.cs</DependentUpon>

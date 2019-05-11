@@ -8,6 +8,7 @@ namespace RodinaUrodina
 {
     public class ManagerToursJobs : ManagerJobs
     {
+
         public DataTable GetAllTours()
         {
             DataSet ds = new DataSet();

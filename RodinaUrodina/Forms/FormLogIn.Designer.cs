@@ -33,7 +33,6 @@
             this.ButtonExit = new System.Windows.Forms.Button();
             this.ButtonCheckIn = new System.Windows.Forms.Button();
             this.ButtonLogIn = new System.Windows.Forms.Button();
-            this.IsEmployee = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // LogTB
@@ -47,6 +46,7 @@
             this.LogTB.ForeColor = System.Drawing.Color.Silver;
             this.LogTB.Location = new System.Drawing.Point(305, 240);
             this.LogTB.Margin = new System.Windows.Forms.Padding(0);
+            this.LogTB.MaxLength = 23;
             this.LogTB.Name = "LogTB";
             this.LogTB.Size = new System.Drawing.Size(350, 26);
             this.LogTB.TabIndex = 2;
@@ -66,6 +66,7 @@
             this.PassTB.ForeColor = System.Drawing.Color.Silver;
             this.PassTB.Location = new System.Drawing.Point(305, 280);
             this.PassTB.Margin = new System.Windows.Forms.Padding(0);
+            this.PassTB.MaxLength = 23;
             this.PassTB.Name = "PassTB";
             this.PassTB.Size = new System.Drawing.Size(350, 26);
             this.PassTB.TabIndex = 3;
@@ -135,23 +136,12 @@
             this.ButtonLogIn.MouseLeave += new System.EventHandler(this.ButtonLogIn_MouseLeave);
             this.ButtonLogIn.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ButtonLogIn_MouseUp);
             // 
-            // IsEmployee
-            // 
-            this.IsEmployee.AutoSize = true;
-            this.IsEmployee.Location = new System.Drawing.Point(419, 310);
-            this.IsEmployee.Name = "IsEmployee";
-            this.IsEmployee.Size = new System.Drawing.Size(126, 17);
-            this.IsEmployee.TabIndex = 10;
-            this.IsEmployee.Text = "войти как работник";
-            this.IsEmployee.UseVisualStyleBackColor = true;
-            // 
             // FormLogIn
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(960, 540);
-            this.Controls.Add(this.IsEmployee);
             this.Controls.Add(this.ButtonExit);
             this.Controls.Add(this.PassTB);
             this.Controls.Add(this.LogTB);
@@ -164,7 +154,6 @@
             this.Name = "FormLogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " ";
-            this.Load += new System.EventHandler(this.FormLogIn_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -177,7 +166,6 @@
         private System.Windows.Forms.TextBox LogTB;
         private System.Windows.Forms.TextBox PassTB;
         private System.Windows.Forms.Button ButtonExit;
-        private System.Windows.Forms.CheckBox IsEmployee;
     }
 }
 
