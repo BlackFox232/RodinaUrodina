@@ -7,6 +7,7 @@ namespace RodinaUrodina
 {
     public class ManagerAuditJobs : ManagerJobs
     {
+
     }
 
 }
