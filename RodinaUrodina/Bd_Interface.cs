@@ -7,42 +7,30 @@ using System.Text;
 
 namespace RodinaUrodina
 {
-    public class Bd_Interface : DbContext
+    public static class Bd_Interface
     {
-        public const string connectionString = "Data Source = DESKTOP-MDU4BGA\\SQLEXPRESS; Initial Catalog = RodinaUrodina; Integrated Security = True";
-        public readonly SqlConnection connection = new SqlConnection(connectionString);
-        public readonly SqlCommand command = new SqlCommand();
+        public const string connectionString = "Data Source = BLACKFOX232; Initial Catalog = RodinaUrodina; Integrated Security = True";
+        public static readonly SqlConnection connection = new SqlConnection(connectionString);
+        public static readonly SqlCommand command = new SqlCommand();
 
-        public Bd_Interface() : base(connectionString) { } 
-        
 
-        public SqlDataAdapter ReturnAdapter(string query)
+        public static SqlDataAdapter ReturnAdapter(string query)
         {
             SqlDataAdapter dataAdapter = new SqlDataAdapter(query, connection);
             return dataAdapter;
         }
 
-        public void MakeQuery(string query)
+        public static void MakeQuery(string query)
         {
-
             SqlCommand command = new SqlCommand(query, connection);
             connection.Open();
+
             SqlDataReader reader = command.ExecuteReader();
 
-            try
-            {
-
-            }
-            catch
-            {
-
-            }
-            finally
-            {
-                reader.Close();
-                connection.Close();
-            }
-
+            reader.Close();
+            connection.Close();
         }
+
+
     }
 }

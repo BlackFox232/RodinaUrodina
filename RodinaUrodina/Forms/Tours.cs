@@ -12,7 +12,6 @@ namespace RodinaUrodina
 {
     public partial class Tours : Form
     {
-        Bd_Interface Bd_Interface = new Bd_Interface();
         UsezverToursJobs usezverToursJobs = new UsezverToursJobs();
 
         public Tours()
@@ -27,7 +26,8 @@ namespace RodinaUrodina
 
         private void button1_Click(object sender, EventArgs e)
         {
-            usezverToursJobs.ReservationTour(2, toursDataGridView.CurrentRow.Index+1);
+            usezverToursJobs.ReservationTour(Program.UserId, toursDataGridView.CurrentRow.Index+1);
+           // usezverToursJobs.ChangeNumberPersons(toursDataGridView.CurrentRow.Index + 1);
         }
     }
 }

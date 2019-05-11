@@ -8,8 +8,6 @@ namespace RodinaUrodina
 {
     public class ManagerToursJobs : ManagerJobs
     {
-        private Bd_Interface Bd_Interface = new Bd_Interface(); 
-
         public DataTable GetAllTours()
         {
             DataSet ds = new DataSet();
