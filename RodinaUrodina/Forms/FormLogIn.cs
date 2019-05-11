@@ -24,15 +24,14 @@ namespace RodinaUrodina
         void WrongLogPass()
         {
             ClearTB();
-
-            MessageBox.Show("Неверный логин или пароль!", "Ошибка!");   //сообщение об ошибке
+             
+              //сообщение об ошибке
         }
 
         void CorrectLogPass(int Id)
-        {
+        { 
             ClearTB();
-
-            MessageBox.Show($"наеззззз!!11!!\n а айди = {Id}");
+            
             Program.UserId = Id;
 
             Program.SelectedForm = Program.Forms.Admin_Form;
@@ -54,10 +53,10 @@ namespace RodinaUrodina
             string Table = "Accounts";
             string query = $"Select * from {Table} Where Login = '{LogTB.Text}' and Pass = '{PassTB.Text}'";
 
-            SqlDataAdapter Adapter = (new Bd_Interface()).ReturnAdapter(query); 
+            SqlDataAdapter Adapter = Bd_Interface.ReturnAdapter(query); 
             DataTable DTable = new DataTable();
             Adapter.Fill(DTable);
-
+           
             if (DTable.Rows.Count == 1) 
                 return (int)DTable.Rows[0].ItemArray[0];
             

@@ -27,7 +27,7 @@ namespace RodinaUrodina
         public static Forms SelectedForm { get; set; } = Forms.FormLogIn;
         public static bool IsClose { get; set; }
 
-        public static int UserId;
+        public static int UserId { get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace RodinaUrodina
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles(); 
+            Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
 
@@ -121,7 +121,7 @@ namespace RodinaUrodina
                     break;
             }
 
-            Application.Run(new Usezver_Form());    
+            Application.Run(new Usezver_Form());
         }
     }
 }
